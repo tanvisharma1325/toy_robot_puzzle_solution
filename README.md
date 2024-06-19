@@ -38,6 +38,8 @@ You can run this application in two ways - either on your local machine or using
 
 ### Note: I just added sample Jenkinsfile to demonstate the CI/CD pipeline?
 
-## This is how our Jenkinsfile looks like:
+## This is how our Swagger UI running at localhost:8000/docs looks like:
 
+![image](https://github.com/tanvisharma1325/toy_robot_puzzle_solution/assets/173178419/4b1daf38-e3d4-4707-ba36-2a1c4f764e7e)
+You can try and test each endpoint "Try it out by expanding each endpoint.
 
