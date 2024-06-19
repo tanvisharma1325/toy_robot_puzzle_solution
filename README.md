@@ -38,6 +38,10 @@ You can run this application in two ways - either on your local machine or using
 
 ### Note: I just added Jenkinsfile to demonstate. How would create the CI/CD?
 
-## This is how our Jenkinsfile looks like:
+## This is how our Swagger UI running at localhost:8000/docs looks like:
+
+![image](https://github.com/tanvisharma1325/toy_robot_puzzle_solution/assets/173178419/4b1daf38-e3d4-4707-ba36-2a1c4f764e7e)
+You can try and test each endpoint "Try it out:
+<img width="1013" alt="BPM WorkFlow High level Architecture diagramv0 1" src="https://github.com/tanvisharma1325/toy_robot_puzzle_solution/assets/173178419/a5019e85-67cd-4d45-aa9d-4bb4f56d9015">
 
 
