@@ -16,7 +16,7 @@ You can run this application in two ways - either on your local machine or using
 4. Install the pytest package using `pip install pytest`.
 5. Run the command `uvicorn toy_robot:app`. This will start the uvicorn server on port 8000.
 6. Navigate to `localhost:8000/docs` to access the swagger UI.
-7. Test all the endpoints using the Swagger UI.
+7. Test all the endpoints using the Swagger UI using 'Try it out'.
 
 ### Using Docker:
 
@@ -25,7 +25,7 @@ You can run this application in two ways - either on your local machine or using
 3. Build the Docker image using `docker build -t <image-name> .`.
 4. Run the container using `docker run -p <port-nbr>:80 <image-name>`.
 5. Navigate to `0.0.0.0:<port-nbr>/docs` to access the swagger UI.
-6. Test all the endpoints using the Swagger UI.
+6. Test all the endpoints using the Swagger UI using 'Try it out'.
 
 ## Unit test on machine:
 
