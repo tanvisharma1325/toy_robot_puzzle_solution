@@ -36,5 +36,8 @@ You can run this application in two ways - either on your local machine or using
 
 1. Docker image runs tests during the image build process. If any of the tests fail it will not build the image.
 
-### Jenkins, I just added Jenkinsfile to demonstate. How would create the CI/CD?
+### Note: I just added Jenkinsfile to demonstate. How would create the CI/CD?
+
+## This is how our Jenkinsfile looks like:
+
 
