@@ -17,6 +17,12 @@ You can run this application in two ways - either on your local machine or using
 5. Run the command `uvicorn toy_robot:app`. This will start the uvicorn server on port 8000.
 6. Navigate to `localhost:8000/docs` to access the swagger UI.
 7. Test all the endpoints using the Swagger UI using 'Try it out'.
+8. List of important endpoints /place , /left, /right, /move/, /report.
+9. /place will place the robot at the provided co-ordinates, if wrong coordiantes provided, it will through the error msg in response.
+10. /left will move the direction 90 degree to the left and response includes the coordinates and the new direction.
+11. /right will move the direction 90 degree to the left and response includes the coordinates and the new direction.
+12. /move will move one step forward in the direction and response will include the new coordiantes.
+13. /format will display the position.
 
 ### Using Docker:
 
@@ -26,6 +32,12 @@ You can run this application in two ways - either on your local machine or using
 4. Run the container using `docker run -p <port-nbr>:80 <image-name>`.
 5. Navigate to `0.0.0.0:<port-nbr>/docs` to access the swagger UI.
 6. Test all the endpoints using the Swagger UI using 'Try it out'.
+8. List of important endpoints /place , /left, /right, /move/, /report.
+9. /place will place the robot at the provided co-ordinates, if wrong coordiantes provided, it will through the error msg in response.
+10. /left will move the direction 90 degree to the left and response includes the coordinates and the new direction.
+11. /right will move the direction 90 degree to the left and response includes the coordinates and the new direction.
+12. /move will move one step forward in the direction and response will include the new coordiantes.
+13. /format will display the position.
 
 ## Unit test on machine:
 
