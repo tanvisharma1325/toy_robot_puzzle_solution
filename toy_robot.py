@@ -5,14 +5,7 @@ location = { "x-axis": 0, "y-axis": 0, "direction": "none"}
 
 @app.get('/')
 def landingPage(): 
-    return {"message": "Welcome to toy-robot-puzzle please first use the place end point"}
-
-@app.post('/initialize/')
-def initilaize(): 
-    location["x-axis"] = 0 
-    location["y-axis"] = 0 
-    location["direction"] = "none" 
-    return {"message": "locatoin is initialized"}
+    return {"message": "Welcome to toy-robot-puzzle please first use the place end point through http://127.0.0.1:8000/docs"}
 
 @app.post("/place/")
 def place(x: int, y: int, direction: str): 

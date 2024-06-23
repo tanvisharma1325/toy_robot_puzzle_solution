@@ -3,6 +3,13 @@ from toy_robot import app
 
 client = TestClient(app)
 
+
+def test_move_before_place():
+    # client.post("/initialize/")
+    response = client.post("/move/")
+    assert response.status_code == 400
+    assert response.json() == {"detail": "The robot has not been placed on the table yet."}
+
 def test_place():
     response = client.post("/place/?x=1&y=1&direction=NORTH")
     assert response.status_code == 200
@@ -48,8 +55,3 @@ def test_move_off_table():
     assert response.status_code == 200
     assert response.json() == {"x-axis": 0, "y-axis": 0, "direction": "SOUTH", "message": "This move is ignored"}
 
-def test_move_before_place():
-    client.post("/initialize/")
-    response = client.post("/move/")
-    assert response.status_code == 400
-    assert response.json() == {"detail": "The robot has not been placed on the table yet."}
