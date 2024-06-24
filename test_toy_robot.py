@@ -5,7 +5,6 @@ client = TestClient(app)
 
 
 def test_move_before_place():
-    # client.post("/initialize/")
     response = client.post("/move/")
     assert response.status_code == 400
     assert response.json() == {"detail": "The robot has not been placed on the table yet."}
@@ -31,7 +30,7 @@ def test_move():
     client.post("/place/?x=1&y=1&direction=NORTH")
     response = client.post("/move/")
     assert response.status_code == 200
-    assert response.json() == {"x-axis": 2, "y-axis": 1, "direction": "NORTH"}
+    assert response.json() == {"x-axis": 1, "y-axis": 2, "direction": "NORTH"}
 
 def test_report():
     client.post("/place/?x=1&y=1&direction=NORTH")

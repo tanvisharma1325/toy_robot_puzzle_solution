@@ -42,7 +42,7 @@ You can run this application in two ways - either on your local machine or using
 ## Unit test on machine:
 
 1. test_toy_robot.py has the unit tests using pytest.
-2. You can run these tests `pytest test_toy_test.py`
+2. You can run these tests `pytest test_toy_robot.py`
 
 ## Unit test on docker:
 
