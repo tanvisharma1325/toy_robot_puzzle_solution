@@ -20,6 +20,9 @@ def place(x: int, y: int, direction: str):
 
 @app.post("/left/")
 def left(): 
+    if location['direction'] == "none": 
+        raise HTTPException(status_code=400, detail="The robot has not been placed on the table yet.") 
+    
     if location["direction"] == "EAST": 
         location["direction"] = "NORTH" 
     elif location["direction"] == "NORTH": 
@@ -33,6 +36,9 @@ def left():
 
 @app.post("/right/")
 def right(): 
+    if location['direction'] == "none": 
+        raise HTTPException(status_code=400, detail="The robot has not been placed on the table yet.") 
+    
     if location["direction"] == "EAST": 
         location["direction"] = "SOUTH" 
     elif location["direction"] == "SOUTH": 
@@ -49,11 +55,11 @@ def move():
         raise HTTPException(status_code=400, detail="The robot has not been placed on the table yet.") 
     
     if location['direction'] == "NORTH" and location["x-axis"] < 4: 
-        location["x-axis"] += 1 
+        location["y-axis"] += 1 
     elif location['direction'] == "SOUTH" and location["y-axis"] > 0: 
         location["y-axis"] -= 1 
     elif location['direction'] == "EAST" and location["y-axis"] < 4: 
-        location["y-axis"] += 1 
+        location["x-axis"] += 1 
     elif location['direction'] == "WEST" and location["x-axis"] > 0: 
         location["x-axis"] -= 1 
     else: 
